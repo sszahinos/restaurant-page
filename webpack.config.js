@@ -15,4 +15,17 @@ module.exports = {
       title: 'Development1',
     })
   ],
+  module: {
+    rules: [
+      {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader'],
+      },
+
+      {
+        test: /\.(png|jpg|jpeg)$/i,
+        type: 'asset/resource',
+      },
+    ],
+  },
 };

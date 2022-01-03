@@ -1,11 +1,14 @@
+import BurgerImg from './res/images/burger.jpg';
+import PizzaImg from './res/images/pizza.jpg';
+
 const REFERENCES = [ //pathm / alt / text
-    "./res/images/burger.jpg", "burger", "Recommended by someone",
-    "./res/images/pizza.jpg", "pizza", "Recommended by other someone"
+    [BurgerImg, "burger", "Recommended by someone"],
+    [PizzaImg, "pizza", "Recommended by other someone"]
 ];
 
 function createHome() {
     const HOME = document.createElement("div");
-    HOME.classList.add("home");
+    HOME.classList.add("home", "container");
     
     HOME.appendChild(createRefs());
 
@@ -15,9 +18,10 @@ function createHome() {
 function createRefs() {
     const REFS_CONTAINER = document.createElement("div");
     REFS_CONTAINER.classList.add("refs-cont");
-
+    console.log("llega");
+    let reference;
     for (let index = 0; index < REFERENCES.length; index++) {
-        let reference = createSingleReference(index % 2, REFERENCES[0], REFERENCES[1], REFERENCES[2]);
+        reference = createSingleReference(index % 2, REFERENCES[index][0], REFERENCES[index][1], REFERENCES[index][2]);
         REFS_CONTAINER.appendChild(reference);
     }
 
@@ -44,7 +48,8 @@ function createSingleReference(direction, img, alt, text) {
     const REF_IMG_CONT = document.createElement("div");
     REF_IMG_CONT.classList.add("ref-image-cont");
 
-    const REF_IMG = document.createElement("img");
+    //const REF_IMG = document.createElement("img");
+    const REF_IMG = new Image();
     REF_IMG.src = img;
     REF_IMG.alt = alt;
 
@@ -59,3 +64,11 @@ function createSingleReference(direction, img, alt, text) {
     return REFERENCE;
 
 }
+
+function setHome() {
+    const MAIN = document.getElementById("main");
+
+    MAIN.appendChild(createHome());
+}
+
+export default setHome;

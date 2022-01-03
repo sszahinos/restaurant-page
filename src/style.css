@@ -7,14 +7,24 @@ body {
 
 /*WEB*/
 header {
-
+    text-align: center;
+    position: sticky;
+    top: 0;
 }
 
-
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+    background-color: red;
+    padding: 10px 0 10px;
+}
 
 /*HOMEPAGE*/
 .home {
-
+    
 }
 
 .refs-cont {
@@ -30,7 +40,8 @@ header {
 }
 
 .ref-image-cont img {
-
+    width: 100%;
+    height: 100%;
 }
 
 .ref-text {

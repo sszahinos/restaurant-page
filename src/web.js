@@ -1,16 +1,49 @@
 import setHome from "./homepage";
+const COPYRIGHT_TEXT = "Copyright © 2022 All rights reserved.";
+const REST_NAME_TEXT = "Cook O' Rama";
 
 function createHeader() {
     const HEADER = document.createElement("header");
 
     const REST_NAME = document.createElement("h1");
     REST_NAME.classList.add("rest-name");
-    REST_NAME.textContent = "Cook-O-Rama";
+    REST_NAME.textContent = REST_NAME_TEXT;
 
     HEADER.appendChild(REST_NAME);
-    //add nav
+    HEADER.appendChild(createNav());
 
     return HEADER;
+}
+
+function createNav() {
+    const NAV = document.createElement('nav');
+
+    const SEPARATOR = document.createElement('div');
+    SEPARATOR.classList.add("nav-separator");
+    SEPARATOR.textContent = "|";
+
+    const HOME_NAV = document.createElement('a');
+    HOME_NAV.setAttribute("id", "home-nav");
+    HOME_NAV.classList.add("nav-item");
+    HOME_NAV.textContent = "HOME";
+
+    const MENU_NAV = document.createElement('a');
+    MENU_NAV.setAttribute("id", "menu-nav");
+    MENU_NAV.classList.add("nav-item");
+    MENU_NAV.textContent = "MENU";
+
+    const ABOUT_NAV = document.createElement('a');
+    ABOUT_NAV.setAttribute("id", "about-nav");
+    ABOUT_NAV.classList.add("nav-item");
+    ABOUT_NAV.textContent = "ABOUT US";
+
+    NAV.appendChild(HOME_NAV);
+    NAV.appendChild(SEPARATOR);
+    NAV.appendChild(MENU_NAV);
+    NAV.appendChild(SEPARATOR.cloneNode(true));
+    NAV.appendChild(ABOUT_NAV);
+
+    return NAV;
 }
 
 function createFooter() {
@@ -24,7 +57,7 @@ function createFooter() {
 
     const COPYRIGHT = document.createElement("div");
     COPYRIGHT.classList.add("copyright");
-    COPYRIGHT.textContent = "Copyright © 2022 All rights reserved.";
+    COPYRIGHT.textContent = COPYRIGHT_TEXT;
 
     FOOTER.appendChild(SOC_NETW_CONTAINER);
     FOOTER.appendChild(COPYRIGHT);
@@ -35,6 +68,7 @@ function createFooter() {
 function createMain() {
     const MAIN = document.createElement("main");
     MAIN.classList.add("main");
+    MAIN.setAttribute("id", "main");
 
     return MAIN;
 }
@@ -46,7 +80,7 @@ function initializeWeb() {
     CONTENT[0].appendChild(createMain());
     CONTENT[0].appendChild(createFooter());
 
-    //setHome();
+    setHome();
 
 }
 
