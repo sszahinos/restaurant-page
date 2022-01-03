@@ -1,1 +1,3 @@
-alert("it works");
+import initializeWeb from "./web";
+
+initializeWeb();
