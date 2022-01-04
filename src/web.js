@@ -1,6 +1,20 @@
 import setHome from "./homepage";
 const COPYRIGHT_TEXT = "Copyright © 2022 All rights reserved.";
 const REST_NAME_TEXT = "Cook O' Rama";
+let sticky = 0;
+let navBar;
+
+function stickyController() {
+    console.log("Sticky: " + sticky);
+    console.log("window.pageYOffset: " + window.pageYOffset);
+    if (window.pageYOffset >= sticky) {
+      navBar.classList.add("sticky")
+      console.log("sticky add")
+    } else {
+      navBar.classList.remove("sticky");
+    }
+    
+} 
 
 function createHeader() {
     const HEADER = document.createElement("header");
@@ -80,6 +94,10 @@ function initializeWeb() {
     CONTENT[0].appendChild(createMain());
     CONTENT[0].appendChild(createFooter());
 
+    navBar = document.getElementsByTagName('nav')[0];
+    sticky = navBar.offsetTop;
+
+    window.onscroll = () => {stickyController();};
     setHome();
 
 }
