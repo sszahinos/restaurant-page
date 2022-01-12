@@ -11,3 +11,9 @@ Credits:
 - Restaurant -> https://www.freeimages.com/es/photo/buda-restaurant-1223975
 
 - Steak -> https://www.freeimages.com/es/photo/steak-1323129
+
+- Instagram logo -> https://www.iconfinder.com/icons/5279112/camera_instagram_social_media_instagram_logo_icon
+
+- FB logo -> https://www.iconfinder.com/icons/5279111/network_fb_social_media_facebook_facebook_logo_icon
+
+- Github logo -> https://www.iconfinder.com/icons/317712/code_repository_github_repository_resource_icon

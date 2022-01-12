@@ -22,7 +22,6 @@ function createHome() {
 function createRefs() {
     const REFS_CONTAINER = document.createElement("div");
     REFS_CONTAINER.classList.add("refs-cont");
-    console.log("llega");
     let reference;
     for (let index = 0; index < REFERENCES.length; index++) {
         reference = createSingleReference(index % 2, REFERENCES[index][0], REFERENCES[index][1], REFERENCES[index][2]);
