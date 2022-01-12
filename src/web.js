@@ -20,7 +20,6 @@ function stickyController() {
     } else {
       navBar.classList.remove("sticky");
     }
-    
 } 
 
 function createHeader() {
@@ -43,17 +42,18 @@ function createNav() {
     SEPARATOR.classList.add("nav-separator");
     SEPARATOR.textContent = "|";
 
-    const HOME_NAV = document.createElement('a');
+    const HOME_NAV = document.createElement('div');
     HOME_NAV.setAttribute("id", "home-nav");
     HOME_NAV.classList.add("nav-item");
     HOME_NAV.textContent = "HOME";
+    HOME_NAV.addEventListener('click', () => (loadHome()));
 
-    const MENU_NAV = document.createElement('a');
+    const MENU_NAV = document.createElement('div');
     MENU_NAV.setAttribute("id", "menu-nav");
     MENU_NAV.classList.add("nav-item");
     MENU_NAV.textContent = "MENU";
 
-    const ABOUT_NAV = document.createElement('a');
+    const ABOUT_NAV = document.createElement('div');
     ABOUT_NAV.setAttribute("id", "about-nav");
     ABOUT_NAV.classList.add("nav-item");
     ABOUT_NAV.textContent = "ABOUT US";
@@ -118,8 +118,33 @@ function initializeWeb() {
     sticky = navBar.offsetTop;
 
     window.onscroll = () => {stickyController();};
-    setHome();
-
+    //setHome();
 }
+
+function clearMain() {
+    let mainContent = document.getElementById("main");
+    while (mainContent.firstChild) {
+        mainContent.removeChild(mainContent.firstChild);
+    }
+}
+
+function loadHome() {
+    console.log("load home");
+    clearMain();
+    setHome();
+}
+
+function loadMenu() {
+    clearMain();
+    setMenu();
+}
+
+function loadAbout() {
+    clearMain();
+    setMenu();
+}
+
+
+
 
 export default initializeWeb;
