@@ -9,9 +9,10 @@ function stickyController() {
     console.log("window.pageYOffset: " + window.pageYOffset);
     if (window.pageYOffset >= sticky) {
       navBar.classList.add("sticky")
-      console.log("sticky add")
+      console.log("sticky");
     } else {
       navBar.classList.remove("sticky");
+      console.log("not Sticky");
     }
     
 } 

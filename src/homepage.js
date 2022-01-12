@@ -1,11 +1,13 @@
 import BurgerImg from './res/images/burger.jpg';
 import PizzaImg from './res/images/pizza.jpg';
 import SaladImg from './res/images/salad.jpg';
+import SteakImg from './res/images/steak.jpg';
 
 const REFERENCES = [ //path / alt / text
     [BurgerImg, "burger", "Recommended by someone"],
     [PizzaImg, "pizza", "Recommended by other someone"],
-    [SaladImg, "salad", "Another recommendation"]
+    [SaladImg, "salad", "Another recommendation"],
+    [SteakImg, "steak", "God recommendation"]
 ];
 
 function createHome() {

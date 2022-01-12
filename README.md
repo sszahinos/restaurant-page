@@ -9,3 +9,5 @@ Credits:
 - Salad -> https://www.freeimages.com/es/photo/salad-1-1323575
 
 - Restaurant -> https://www.freeimages.com/es/photo/buda-restaurant-1223975
+
+- Steak -> https://www.freeimages.com/es/photo/steak-1323129
