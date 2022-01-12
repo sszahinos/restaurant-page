@@ -1,6 +1,6 @@
 body {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     width: 100%;
     height: auto;
 }
@@ -53,7 +53,8 @@ main {
     min-height: 90vh;
     text-align: center;
     background-color: aquamarine;
-    margin: 1vh auto 1vh auto;
+    margin: 0 auto 0 auto;
+    padding: 1vh 0 1vh 0;
 }
 
 .refs-cont {

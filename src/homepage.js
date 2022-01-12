@@ -7,7 +7,7 @@ const REFERENCES = [ //path / alt / text
     [BurgerImg, "burger", "Recommended by someone"],
     [PizzaImg, "pizza", "Recommended by other someone"],
     [SaladImg, "salad", "Another recommendation"],
-    [SteakImg, "steak", "God recommendation"]
+    [SteakImg, "steak", "God recommends this"]
 ];
 
 function createHome() {
