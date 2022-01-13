@@ -53,8 +53,6 @@ main {
     min-height: 90vh;
     text-align: center;
     background-color: aquamarine;
-    margin: 0 auto 0 auto;
-    padding: 1vh 0 1vh 0;
 }
 
 .refs-cont {
@@ -97,6 +95,20 @@ main {
     max-height: 100%;
 }
 
+/*MENU*/
+.menu {
+    width: 60vw;
+    height: auto;
+    min-height: 90vh;
+    text-align: center;
+    background-color: aquamarine;
+}
+
+.menu-list {
+    background-color: cornflowerblue;
+}
+
+
 /*FOOTER*/
 footer {
     height: 5vh;
@@ -117,6 +129,11 @@ footer {
 }
 
 /*COMMON*/
+.home, .menu {
+    margin: 0 auto 0 auto;
+    padding: 1vh 0 1vh 0;
+}
+
 .row-container {
     display: flex;
     flex-direction: row;

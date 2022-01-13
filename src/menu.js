@@ -1,7 +1,7 @@
 import * as MenuData from './res/menu/menu.json';
 const ITEM_SPACING = " -------- ";
 const REST_MENU = MenuData;
-const REST_MENU_SECTIONS = Object.keys(REST_MENU);
+//const REST_MENU_SECTIONS = Object.keys(REST_MENU.sections);
 
 function createMenu() {
     const MENU = document.createElement("div");
@@ -14,19 +14,13 @@ function createMenu() {
 function createMenuList() {
     const MENU_LIST = document.createElement("div");
     MENU_LIST.classList.add("menu-list");
-    
-    for (const sec in REST_MENU) {
-        console.log(sec.sectionName);
-    }
 
-    ////
-    /*for (let index = 0; index < REST_MENU.length; index++) {
-        console.log(REST_MENU.section1);
-        MENU_LIST.appendChild(createMenuSection(REST_MENU[index][0], REST_MENU[index][1]));        
-        console.log("section added");
-    }*/
-    ////
-    //console.log(MENU_LIST);
+    for (let sect = 0; sect < REST_MENU.sections.length; sect++) {
+        MENU_LIST.appendChild(createMenuSection(
+            REST_MENU.sections[sect].sectionName,
+            REST_MENU.sections[sect].items));
+    }   
+
     return MENU_LIST;
 }
 
@@ -47,11 +41,11 @@ function createMenuSection(title, sectionItems) {
     return SECTION;
 }
 
-function createMenuItem(item) { //Item = ["name", "price"]
+function createMenuItem(item) { //Item = {"name", "price"}
     const ITEM = document.createElement("div");
-    ITEM.setAttribute("id", `item-${item[0]}`);
+    ITEM.setAttribute("id", `item-${item.name}`);
     ITEM.classList.add("section-item");
-    ITEM.textContent = item[0] + ITEM_SPACING + item[1] + "€";
+    ITEM.textContent = item.name + ITEM_SPACING + item.price + "€";
     
     return ITEM;
 }
