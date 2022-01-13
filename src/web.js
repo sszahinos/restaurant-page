@@ -1,4 +1,6 @@
 import setHome from "./homepage";
+import setMenu from "./menu";
+import setAbout from "./about";
 import GitHubLogo from './res/images/github.png';
 import InstagramLogo from './res/images/instagram.png';
 import FacebookLogo from './res/images/facebook.png';
@@ -52,11 +54,13 @@ function createNav() {
     MENU_NAV.setAttribute("id", "menu-nav");
     MENU_NAV.classList.add("nav-item");
     MENU_NAV.textContent = "MENU";
+    MENU_NAV.addEventListener('click', () => (loadMenu()));
 
     const ABOUT_NAV = document.createElement('div');
     ABOUT_NAV.setAttribute("id", "about-nav");
     ABOUT_NAV.classList.add("nav-item");
     ABOUT_NAV.textContent = "ABOUT US";
+    ABOUT_NAV.addEventListener('click', () => (loadAbout()));
 
     NAV.appendChild(HOME_NAV);
     NAV.appendChild(SEPARATOR);
@@ -90,7 +94,6 @@ function createFooter() {
     SOC_NETW_CONTAINER.setAttribute("id", "sn-container");
 
     for (let index = 0; index < SN.length; index++) {
-        console.log(SN[index][0]);
         SOC_NETW_CONTAINER.appendChild(getSocNetw(SN[index][0], SN[index][1], SN[index][2]));
     }
 
@@ -119,6 +122,7 @@ function initializeWeb() {
 
     window.onscroll = () => {stickyController();};
     //setHome();
+    setMenu();
 }
 
 function clearMain() {
@@ -137,14 +141,12 @@ function loadHome() {
 function loadMenu() {
     clearMain();
     setMenu();
+    console.log("load menu");
 }
 
 function loadAbout() {
     clearMain();
-    setMenu();
+    //setAbout();
 }
-
-
-
 
 export default initializeWeb;

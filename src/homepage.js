@@ -2,6 +2,7 @@ import BurgerImg from './res/images/burger.jpg';
 import PizzaImg from './res/images/pizza.jpg';
 import SaladImg from './res/images/salad.jpg';
 import SteakImg from './res/images/steak.jpg';
+import { createParagraph } from './utilities';
 
 const REFERENCES = [ //path / alt / text
     [BurgerImg, "burger", "Recommended by someone"],
@@ -29,13 +30,6 @@ function createRefs() {
     }
 
     return REFS_CONTAINER;
-}
-
-function createParagraph(text) {
-    const paragraph = document.createElement("p");
-    paragraph.textContent = text;
-
-    return paragraph;
 }
 
 ///Creates single reference. Direction = 0 -> normal / Other -> reverse
