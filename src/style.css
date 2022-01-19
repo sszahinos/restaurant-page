@@ -42,10 +42,6 @@ nav {
     cursor: pointer;
 }
 
-main {
-    background-color: darkgreen;
-}
-
 /*HOMEPAGE*/
 .home {
     width: 60vw;
@@ -105,7 +101,16 @@ main {
 }
 
 .menu-list {
-    background-color: cornflowerblue;
+    padding: 0vh 1vh 0vh 1vh;
+    background-color: rgb(212, 237, 100);
+}
+
+.section-title {
+    text-align: start;
+}
+
+.section-item {
+    text-align: end;
 }
 
 
@@ -132,6 +137,10 @@ footer {
 .home, .menu {
     margin: 0 auto 0 auto;
     padding: 1vh 0 1vh 0;
+}
+
+.main { /*min heigh to solve sticky nav issues*/
+    min-height: 150vh;
 }
 
 .row-container {

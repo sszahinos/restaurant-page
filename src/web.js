@@ -19,7 +19,7 @@ let navBar;
 function stickyController() {
     if (window.pageYOffset >= sticky) {
       navBar.classList.add("sticky");
-    } else {
+    } else if (window.pageYOffset < sticky){
       navBar.classList.remove("sticky");
     }
 } 
@@ -121,11 +121,11 @@ function initializeWeb() {
     sticky = navBar.offsetTop;
 
     window.onscroll = () => {stickyController();};
-    //setHome();
-    setMenu();
+    setHome();
 }
 
 function clearMain() {
+    window.scrollTo(0,0);
     let mainContent = document.getElementById("main");
     while (mainContent.firstChild) {
         mainContent.removeChild(mainContent.firstChild);
